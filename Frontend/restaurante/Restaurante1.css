@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -13,9 +13,13 @@ body {
     font-family: 'poppins', sans-serif;
 }
 
+
 .container {
-    max-width: 1200px;
+    max-width: 1500px;
+    height: 500px;
     margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .swiper-button-prev::after{
@@ -72,7 +76,7 @@ body {
 }
 
 .logo-2{
-    width: 150px
+    width: 100px
 }
 
 .socials{
@@ -152,6 +156,7 @@ header.content{
 .slider-txt p{
     font-size: 18px;
     color: #d7ccc8;
+    margin: 0px 0 30px 0;
 }
 
 .botones{
@@ -203,9 +208,9 @@ header.content{
 }
 
 .slide-img img{
-    width: 300px !important;
+    width: 150px;
     max-width: 100%;
-    height: auto;
+    height: 0;
     margin-right: 0;
     display: block;
 }
@@ -307,7 +312,7 @@ header.content{
     margin-top: 15px;
 }
 
-.product-txt span {
+.product-txt h2 {
     color: #cfd4d6;
     font-size: 10px;
     font-weight: 800;
@@ -422,11 +427,13 @@ header.content{
     }
 
     .logo-1 {
-        width: 100px;
+        width: 50px;
+
     }
 
     .logo-2 {
-        width: 0;
+        width: 50px;
+        height: 50px;
     }
 
     .menu label {
@@ -585,3 +592,49 @@ header.content{
 
 }
 
+
+
+
+/* Estilos básicos para el modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Permanece en la misma posición, incluso al hacer scroll */
+  z-index: 1; /* Se superpone sobre otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Permite scroll si el contenido es muy largo */
+  background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+  justify-content: center; /* Centra el contenido horizontalmente (usado con display:flex) */
+  align-items: center; /* Centra el contenido verticalmente (usado con display:flex) */
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto; /* Centrado si no se usa flexbox en el .modal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ancho del contenido */
+  max-width: 500px; /* Ancho máximo */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  position: relative; /* Para posicionar el botón de cierre */
+}
+
+/* Botón de cierre */
+.close-button {
+  color: #aaa;
+  float: right; /* Alinea a la derecha */
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
