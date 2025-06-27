@@ -7,27 +7,36 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="Restaurante1.css">
+    <link rel="stylesheet" href="/Frontend/Menu Web/Menu.css">
+    <link rel="stylesheet" href="/Frontend/Menu Web/Menu.js">
 </head>
 
 <body>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="proyecto_bot"
+  agent-id="1854a80a-4d31-4460-a6a2-d127e0254365"
+  language-code="es">
+</df-messenger>
     <header>
         <div class="menu continer">
-            <img class="logo-1" src="/Frontend/img/logo.svg" alt="">
+            <img class="logo-1" src="/Frontend/img/logod2r-removebg-preview.png" alt="">
             <label for="menu ">
                 <img src="/Frontend/img/menu.png" class="menu-icon" alt="">
             </label>
             <nav class="navbar">
                 <div class="menu-1">
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Productos</a></li>
+                        <li><a href="#mas informacion">Informacion</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#horario">Horario</a></li>
                     </ul>
-                </div>                                                                                                                 
+                </div>
                 <img class="logo-2" src="/Frontend/img/logo.svg" alt="">
                 <div class="menu-2">
                     <ul>
-                        <li><a href="#">Horario</a></li>
+                        <li><a href="#ubicacion">Ubicacion</a></li>
                     </ul>
                     <div class="socials">
                         <a href="https://www.facebook.com/las2reinascolonia/?locale=es_LA" target="_blank">
@@ -65,11 +74,11 @@
                                 </p>
                                 <div class="botones">
                                     <a href="#" class="btn-1">Comprar</a>
-                                    <a href="#" class="btn-2">Menu</a>
+                                    <a href="#" class="btn-2" id="abrirModalBtn">Menu</a>
                                 </div>
                             </div>
                             <div class="slider-img" >
-                                <img src="/Frontend/img/slider1.png" alt="">
+                                <img src="/Frontend/img/menu/Gemini_Generated_Image_qjldohqjldohqjld-removebg-preview (1).png" alt="" >
                             </div>
                         </div>
                     </div> 
@@ -81,10 +90,146 @@
         </div>
 
     </header>
+<div id="miModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span><body>
+    <div class="wrapper">
+  <div class="cols">
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(/Frontend/img/menu/desayunos\ y\ meriendas.png)">
+						<div class="inner">
+							<h1>Desayuno <br> y <br> merienda</h1>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+						  <p>Más información</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(/Frontend/img/menu/menuinfantil.png);">
+						<div class="inner">
+							<h1>Menu Infantil</h1>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Más información</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(/Frontend/img/menu/chivito\,\ milanesa\,\ chorizo.png)">
+						<div class="inner">
+							<h1>Milanesas <br> Hamburgesas <br> Chivitos <br> Chorizo</h1>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Más información</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(/Frontend/img/menu/ensalada\ y\ guar.png)">
+						<div class="inner">
+							<h1>Guarniciones <br> y <br> Ensaladas</h1>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Más información</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(/Frontend/img/menu/pizzas.png)">
+						<div class="inner">
+							<h1>Pizzas</h1>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Más información</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(/Frontend/img/menu/combos\ y\ picada.png)">
+						<div class="inner">
+							<h1>Combos <br> y <br> Picada</h1>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Más información</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(/Frontend/img/menu/postres.png)">
+						<div class="inner">
+							<h1>Postres</h1>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Más información</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(/Frontend/img/menu/bebidas.png)">
+						<div class="inner">
+							<h1>Bebidas</h1>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Más información</p>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(/Frontend/img/menu/tragos.png)">
+						<div class="inner">
+							<h1>Tragos</h1>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Más información</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ </div>
+</body>
+  </div>
+</div>
 
     <main class="Productos">
-        <div class="tabs conteiner">
-            <input type="radio" name="tabs" id="tab1" checked="checked" class="tabInput" value="1">
+        <div class="tabs conteiner" id="productos">
+            <input type="radio" name="tabs" id="tab1" checked="checked" class="tabInput" value="1" >
             <label for="tab1">Hamburgesa</label>
             <div class="tab">
                 <div class="swiper mySwiper-2" id="swiper1">
@@ -260,7 +405,7 @@
             <img src="/Frontend/img/info.png" alt="">
         </div>
         <div class="info-text">
-            <h2>Informacion</h2>
+            <h2 id="mas informacion">Informacion</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.
             </p>
@@ -270,7 +415,7 @@
 
     <section class="horario">
         <div class="horarios-info container">
-            <h2>Horarios</h2>
+            <h2 id="horario">Horarios</h2>
             <div class="horarios-txt"> 
                 <div class="txt"> 
                     <h4>Direccion</h4>
@@ -327,12 +472,12 @@
 
     <section>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3229.2359806649756!2d-57.844191582791005!3d-34.4725703142121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a313006eaf5ae9%3A0x30866766114bce2d!2sLas%202%20Reinas%20Cafeter%C3%ADa%20y%20Restaurant!5e1!3m2!1ses-419!2suy!4v1750363435146!5m2!1ses-419!2suy" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe id="ubicacion" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3229.2359806649756!2d-57.844191582791005!3d-34.4725703142121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a313006eaf5ae9%3A0x30866766114bce2d!2sLas%202%20Reinas%20Cafeter%C3%ADa%20y%20Restaurant!5e1!3m2!1ses-419!2suy!4v1750363435146!5m2!1ses-419!2suy" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </section>
 
     <footer class="footer container">
-        <img class="logo-2" src="/Frontend/img/logo.svg" alt="">
+        <img class="logo-2" src="/Frontend/img/logod2r-removebg-preview.png" alt="">
         <div class="links">
             <h4>Lorem</h4>
             <ul>
@@ -381,8 +526,6 @@
                     </div>
         </div>
     </footer>
-
-   
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="Restaurante1.js"></script>
